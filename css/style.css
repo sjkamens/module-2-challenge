@@ -1,6 +1,7 @@
 :root {
   --accent1: rgb(94, 88, 88);
   --accent-main: rgb(108, 194, 216);
+  --page-sectionleft: rgb(1, 2, 77);
 }
 
 * {
@@ -65,6 +66,126 @@ header {
   width: 210px;
   float: right;
 }
+
+/* Sections CSS */
+.page-section {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-areas:
+    "about-text  about-content"
+    "work-text work-content"
+    "contact-text  contact-content";
+}
+
+.page-section h2 {
+  color: var(--page-sectionleft);
+  font-size: 50px;
+}
+
+#about-text {
+  grid-area: about-text;
+}
+
+#about-content {
+  grid-area: about-content;
+}
+
+#work-text {
+  grid-area: work-text;
+}
+
+#work-content {
+  grid-area: work-content;
+}
+
+#contact-text {
+  grid-area: contact-text;
+}
+
+#contact-content {
+  grid-area: contact-content;
+}
+
+.section-descriptions {
+  border-right: 6px solid var(--page-sectionleft);
+}
+
+.section-content {
+  margin-left: 40px;
+}
+
+/* Work Content Grid */
+#work-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 550px 200px 200px;
+  grid-template-areas:
+    "surfreport surfreport"
+    "LEDwall calculator"
+    "pastel-puzzles runbuddy";
+}
+
+.work-examples {
+  border: 6px solid var(--accent-main);
+  margin: 10px 10px 10px 10px;
+}
+
+.work-examples h3 {
+  font-style: bold;
+  font-size: 30px;
+}
+
+.work-examples h4 {
+  font-style: normal;
+  font-weight: 100;
+}
+
+.work-examples h3, h4 {
+  background-color: var(--accent-main);
+  width: 210px;
+}
+
+#surfreport {
+  grid-area: surfreport;
+  background-image: url("../images/02-portfolio-1.jpg");
+}
+
+#LEDwall {
+  grid-area: LEDwall;
+  background-image: url("../images/02-portfolio-2.jpg");
+}
+
+#calculator {
+  grid-area: calculator;
+  background-image: url("../images/02-portfolio-3.jpg");
+}
+
+#pastel-puzzles {
+  grid-area: pastel-puzzles;
+  background-image: url("../images/02-portfolio-4.jpg");
+}
+
+#runbuddy {
+  grid-area: runbuddy;
+  background-image: url("../images/02-run-buddy.jpg");
+}
+
+/* Contact CSS */
+#contact-content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+}
+
+#contact-content a {
+  font-size: 30px;
+  margin-right: 150px;
+  color: var(--page-sectionleft);
+}
+
+
+
+
 
 h1,
 h2,
