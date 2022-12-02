@@ -1,3 +1,8 @@
+:root {
+  --accent1: rgb(94, 88, 88);
+  --accent-main: rgb(108, 194, 216);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -7,6 +12,58 @@ body {
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
+}
+
+/* Header CSS */
+header h1 {
+  background-color: var(--accent-main);
+  width: 200px;
+}
+
+header {
+  background-color: var(--accent1);
+}
+
+/* Navigation CSS */
+/* Add a black background color to the top navigation */
+.navigation {
+  background-color: var(--accent1);
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.navigation a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.navigation a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.navigation a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Banner CSS */
+.hero-banner {
+  background-image: url("../images/02-hero-bg.jpg");
+  padding: 80px;
+  background-size: 500px;
+}
+
+.hero-banner h2 {
+  background-color: var(--accent-main);
+  width: 210px;
+  float: right;
 }
 
 h1,
